@@ -1,12 +1,12 @@
 # Custom DQL Time functions
 Get custom time function in Doctrine Query Langage (DQL)
 
-# Contains
+## Contains
 - Time_diff : difference between two DateTime PHP object
 - Time_add  : add an amount of time to a DateTime
 - Time_sub  : sub an amount of time to a DateTime
 
-# Installation
+## Installation
 - Symfony/app/config/config.yml :
 (...)
 doctrine:
@@ -21,13 +21,13 @@ doctrine:
   
 - Copy src/DQL/TimeAdd.php src/DQL/TimeDiff.php src/DQL/TimeSub.php to your Symfony/src/DQL/
 
-# Usages
+## Usages
 In your DQL request
 TIME_DIFF(DateTime1, DateTime2, unit)
 TIME_ADD(DateTime, interval, unit)
 TIME_SUB(DateTime, interval, unit)
 
-# Examples
+## Examples
 $em->createQuery("... TIME_ADD(:date, 12, 'minute') ...")
    ->setParameters(array('date' => $dateTime));
 
@@ -44,5 +44,5 @@ $em->createQuery("... TIME_DIFF(:date1, :date2, 'minute') ...")
 	)); 
 returns an integer
 
-# Authors
-CLARAS Damien & PLATTEAU Jonathan
+## Authors
+CLARAS Damien & [PLATTEAU Jonathan](jonathan.pl)
